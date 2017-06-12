@@ -1,0 +1,90 @@
+.jumbotron{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 30px;
+	/*color: #009BAA;*/
+	background-color: #eee;
+	position: fixed;
+	right: 0px;
+	left:0px;
+	z-index: 10;
+}
+
+.smaller#jumbotron{
+	min-height: 0px !important;
+}
+
+h1#banner-title, img#header-image, div#navigate, div#jumbotron{
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.nav > li,
+.nav > li,
+.nav > li > a,
+.nav > li > a:hover,
+.nav > li > a:focus {
+	-webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+	display: block;
+}
+
+.page-header{
+	vertical-align: middle;
+}
+
+.header-image {
+	float:right;
+	height: 275px
+}
+
+/*.navbut > a{
+	color: white;
+}*/
+
+.navtitle {
+	border: none;
+}
+
+.smaller#banner-title{
+	font-size: 30px;
+}
+
+.smaller#header-image{
+	height: 0pt;
+}
+
+.navigate{
+	position: absolute;
+	left: 13%;
+	top: 180px;
+}
+
+.smaller#navigate{
+	left: 56%;
+	top: 20px;
+}
+
+@media( min-width: 1200px){
+.smaller#navigation{
+	top: 180px;
+}
+}
+
+@media( min-width: 992px ){
+.jumbotron{
+	min-height: 170px;
+}
+}
+
+
+@media(min-width:1200px){
+h1#banner-title{
+font-size: 400%;
+}}

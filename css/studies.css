@@ -1,0 +1,127 @@
+body {
+  padding-top: 50px;
+  background-color: #ddd;
+}
+
+
+/*.main-container behaviour*/
+.main-container{
+      position: relative;
+	  padding-top: 305px;
+	  float: inherit;
+}
+
+@media (max-width: 1199px) {
+	.main-container{
+		padding-top: 200px;
+	}
+}
+
+@media (max-width: 991px) {
+	.main-container{
+		padding-top: 150px;
+	}
+}
+
+
+/*main text-panel*/
+.panel{
+	margin-top: 0px;
+	width: 100%;
+}
+
+.panel > .panel-heading {
+	background-color: #fff;
+	font-size: 23px;
+	font-weight: bold;
+	border: 0px;
+	margin: 1.5%;
+	margin-bottom: 0px;
+}
+
+.panel > .panel-body {
+	font-size: 13px;
+	line-height: 20px;
+	border: 0px;
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+}
+.panel > .panel-body >li{
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+}
+
+.panel > .panel-body >img{
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+	margin-top:1.5;
+	margin-bottom:1.5;
+}
+/*Background line*/
+.line {
+	  background-attachment: absolute;
+	  position: fixed;
+	  z-index: -1;
+	  left: -10%;
+	  width: 107%;
+	  height: 15px;
+	  background-color: #D60270;
+	  margin-top:35%;
+	  -webkit-transform: rotate(-66deg); /* Safari and Chrome */
+		  -ms-transform: rotate(-66deg); /* IE 9 */
+			  transform: rotate(-66deg);
+}
+
+.line2 {
+	  background-attachment: absolute;
+	  position: fixed;
+	  z-index: -1;
+	  left: -53%;
+	  width: 107%;
+	  height: 15px;
+	  background-color: #D60270;
+	  margin-top:132%;
+	  -webkit-transform: rotate(-66deg); /* Safari and Chrome */
+		  -ms-transform: rotate(-66deg); /* IE 9 */
+			  transform: rotate(-66deg);
+}
+
+/* navigation menu */
+#navigation{
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+@media( min-width: 992px){
+	#navigation{
+		top: 250px;
+		position: fixed;
+		width: 220px;
+	}
+}
+
+@media( min-width: 1200px){
+	#navigation{
+		width: 275px;
+		top: 350px;
+	}
+}
+/*table*/
+	table.tableizer-table {
+		font-size: 12px;
+		border: 1px solid #CCC; 
+		font-family: Arial, Helvetica, sans-serif;
+	} 
+	.tableizer-table td {
+		padding: 4px;
+		margin: 3px;
+		border: 1px solid #CCC;
+	}
+	.tableizer-table th {
+		background-color: #104E8B; 
+		color: #FFF;
+		font-weight: bold;
+	}
