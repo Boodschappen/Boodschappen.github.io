@@ -15,7 +15,6 @@ function format(time) {
         + "-" + time.getFullYear()
         + " " + pad2(time.getHours())
         + ":" + pad2(time.getMinutes())
-        + ":" + pad2(time.getSeconds());
 }
 
 function startTime() {

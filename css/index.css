@@ -1,12 +1,34 @@
-.icon {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 30px; 
+.panelgrey{
+	background-color: #9F9F9F;
 }
 
-#images{
-    text-align:center;
-	padding:1px;
-	border:1px solid #021a40;
-} 
+.panelwhite{
+	background-color: #FFFFFF !important;
+}
+
+.txtcenter{
+	text-align:center;
+}
+
+.panel{
+	box-shadow: 0 0 15px #404040 !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+button{
+	max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+	
+}
+
+font{
+	ax-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
