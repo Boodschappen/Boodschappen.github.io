@@ -24,5 +24,31 @@ function startTime() {
     setTimeout(startTime, 1000/factor - (now.getMilliseconds() % (1000/factor)));
 }
 
+var step=0.1;
+
+function raise() {
+	var current = mySlider.slider('getValue');
+	mySlider.slider('setValue',current + step, false, true)
+}
+
+function lower() {
+	var current = mySlider.slider('getValue');
+	mySlider.slider('setValue',current - step, false, true)
+}
+
 var output = document.getElementById("clock");
 startTime();
+
+
+//slider
+var mySlider = $("#slid").slider({
+	reversed: true,
+	step: step,
+	id: "slidcolor"
+});
+
+$("#raiseT").text(mySlider.slider('getValue'));
+
+mySlider.on("change",function(x){
+	$("#raiseT").text(x.value.newValue);
+});

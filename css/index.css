@@ -27,8 +27,23 @@ button{
 	
 }
 
-font{
-	ax-width: 100%;
-    height: auto;
-    width: auto\9; /* ie8 */
+.slider.slider-vertical {
+	height: 100% !important;
+}
+
+#slidcolor .slider-track-high{
+	background: darkred;
+}
+
+.slider-handle {
+	background: black
+}
+
+p {
+    font-size: 8px; 
+    font-size: 3vw;
+}
+
+button{
+    box-shadow: 0 0 10px #989898;
 }
