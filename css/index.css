@@ -63,11 +63,11 @@ button{
 
 .glyphicon.glyphicon-chevron-down {
     font-size: 10px; 
-    font-size: 4vmin;
+    font-size: 9vmin;
 }
 
 .glyphicon.glyphicon-chevron-up {
     font-size: 10px; 
-    font-size: 4vmin;
+    font-size: 9vmin;
 	color: darkred;
 }
