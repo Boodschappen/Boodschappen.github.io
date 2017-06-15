@@ -1,5 +1,5 @@
 .panelgrey{
-	background-color: #9F9F9F;
+	background-color: #3a4a66;
 }
 
 .panelwhite{
@@ -8,6 +8,9 @@
 
 .txtcenter{
 	text-align:center;
+	display: flex;
+    align-items: center;
+	justify-content:center
 }
 
 .panel{
@@ -19,7 +22,7 @@ img {
     height: auto;
     width: auto\9; /* ie8 */
 }
-
+;
 button{
 	max-width: 100%;
     height: auto;
@@ -29,6 +32,16 @@ button{
 
 .slider.slider-vertical {
 	height: 100% !important;
+	
+}
+
+.slider.slider-vertical .slider-track {
+	width: 25px !important;
+}
+
+.slider-handle {
+	width: 35px !important;
+	height: 15px !important;
 }
 
 #slidcolor .slider-track-high{
@@ -40,8 +53,8 @@ button{
 }
 
 p {
-    font-size: 8px; 
-    font-size: 3vw;
+    font-size: 5px; 
+    font-size: 3vmin;
 }
 
 button{
@@ -49,11 +62,12 @@ button{
 }
 
 .glyphicon.glyphicon-chevron-down {
-    font-size: 20px; 
-    font-size: 6vw;
+    font-size: 10px; 
+    font-size: 4vmin;
 }
 
 .glyphicon.glyphicon-chevron-up {
-    font-size: 20px; 
-    font-size: 6vw;
+    font-size: 10px; 
+    font-size: 4vmin;
+	color: darkred;
 }

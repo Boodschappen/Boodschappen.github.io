@@ -47,8 +47,8 @@ var mySlider = $("#slid").slider({
 	id: "slidcolor"
 });
 
-$("#raiseT").text(mySlider.slider('getValue'));
+$("#raiseT").text(mySlider.slider('getValue').toFixed(1));
 
 mySlider.on("change",function(x){
-	$("#raiseT").text(x.value.newValue);
+	$("#raiseT").text(x.value.newValue.toFixed(1));
 });

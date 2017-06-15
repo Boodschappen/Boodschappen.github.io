@@ -27,35 +27,61 @@
 	</head>
 
 
-	<body>
+<body>
 	<div class="container">
 		<div class="panel panel-default" >
 			<div class="panel-heading panelwhite">
-				<h4>Mobile Thermostat <small><span id="clock"></span></small>
+				<h4>Mobile Thermostat <small>
+						<span id="clock"/>
+					</small>
 				</h4>
 			</div>
 			<div class="panel-body panelgrey">
 				<div class="row" style="margin:0">
-					<div class="col-xs-6" >
-						<div class="panel panel-default">
-							<div class="panel-body txtcenter" style="height:128px" >
-								<p>Current Temperature</p>
-								<h3>
-									<b>19 °C</b>
-								</h3>
+					<div class="col-xs-12" >
+						<div class="panel panel-default" >
+							<div class="panel-body txtcenter">
+								<div class="col-xs-6">
+									<a href="#">
+										<button type="button" class="btn btn-default" style="border: 2; background: transparent">
+											<img src="images/sun.jpg" width="90" height="50"/>
+										</button>
+									</a>
+								</div>
+
+								<div class="col-xs-6">
+									<a href="#">
+										<button type="button" class="btn btn-default" style="border: 2; background: transparent">
+											<img src="images/moon.jpg" width="90" height="50"/>
+										</button>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
-
-					<div class="col-xs-6" >
+				</div>
+				<div class="row" style="margin:0">
+				<div class="col-xs-6" >
+						<div class="panel panel-default">
+							<div class="panel-body txtcenter" style="height:200px" >
+								<div style="display:block">
+								<p>Current Temperature</p>
+								<h1>
+									<p style="font-size:6vmin">temp retrieved</p>
+								</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6">
 						<div class="panel panel-default" >
-							<div class="panel-body txtcenter" style="height:128px">
+							<div class="panel-body txtcenter" style="height:200px">
 								<div class="col-xs-6">
-									<a ref="#" onclick="raise()">
+									<a href="#" onclick="raise()">
 										<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"/>
 									</a>
-									<h5 id="raiseT"></h5>
-									<a ref="#" onclick="lower()">
+									<p style="font-size:6vmin"><span id="raiseT"></span>°C</p>
+									<a href="#" onclick="lower()">
 										<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"/>
 									</a>
 								</div>
@@ -67,51 +93,32 @@
 					</div>
 				</div>
 				<div class="row" style="margin:0">
-				<div class="col-xs-12">
-					<div class="panel panel-default" >
-						<div class="panel-body txtcenter">
-							<div class="col-xs-6">
-								<a href="#">
-									<button type="button" class="btn btn-default" style="border: 2; background: transparent">
-										<img src="images/sun.jpg" width="90" height="50"/>
-									</button>
-								</a>
-							</div>
+					<div class="col-xs-12">
+						<div class="panel panel-default" >
+							<div class="panel-body txtcenter">
+								<div class="col-xs-6">
+									<a href="#">
+										<button type="button" class="btn btn-default" style="border: 2; background: transparent">
+											<p>Week <br> Program</p>
+										</button>
+									</a>
+								</div>
 
-							<div class="col-xs-6">
-								<a href="#">
-									<button type="button" class="btn btn-default" style="border: 2; background: transparent">
-										<img src="images/moon.jpg" width="90" height="50"/>
-									</button>
-								</a>
+								<div class="col-xs-6">
+									<a href="#">
+										<button type="button" class="btn btn-default" style="border: 2; background: transparent">
+											<p>Custom <br>Temp.</p>
+										</button>
+									</a>
+								</div>
 							</div>
 						</div>
-					</div>
-					</div>
-				</div>
-				<div class="row" style="margin:0">
-				<div class="col-xs-12">
-					<div class="panel panel-default" >
-						<div class="panel-body txtcenter">
-							<div class="col-xs-6">
-								<a href="#">
-									<button type="button" class="btn btn-default" style="border: 2; background: transparent"><p>Week <br> Program</p></button>
-								</a>
-							</div>
-
-							<div class="col-xs-6">
-								<a href="#">
-									<button type="button" class="btn btn-default" style="border: 2; background: transparent"><p>Custom <br>Temp.</p></button>
-								</a>
-							</div>
-						</div>
-					</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-
+	</div>
+					
 
 			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
