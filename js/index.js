@@ -1,15 +1,16 @@
 var step = 0.1;
+var mySlider;
 
 window.addEventListener("load", init, false);
 
 function raise() {
     var current = mySlider.slider('getValue');
-    mySlider.slider('setValue', current + step, false, true)
+    setTarget(current + step);
 }
 
 function lower() {
     var current = mySlider.slider('getValue');
-    mySlider.slider('setValue', current - step, false, true)
+    setTarget(current - step);
 }
 
 function timeUpdate() {
@@ -17,34 +18,70 @@ function timeUpdate() {
     $("#clock").text(get("time", "time"));
 }
 
-function currentTemp(){
-        $("#currentTemp").text(get("currentTemperature","current_temperature")+"°C");
+function currentTemp() {
+    var curr = get("currentTemperature", "current_temperature");
+    var targ = get("targetTemperature", "target_temperature")
+
+    $("#currentTemp").text(curr + "°C");
+
+    if (curr < targ) {
+        $("#up").show();
+        $("#dup").hide();
+        
+    }
+    else if (curr > targ) {
+        $("#dup").show();
+        $("#up").hide();
+    }
+    else {
+        $("#up").hide();
+        $("#dup").hide();
+    }
+
+}
+
+function setTarget(temp) {
+    mySlider.slider('setValue', temp);
+    put("targetTemperature", "target_temperature", temp);
+    $("#raiseT").text(temp.toFixed(1));
+}
+
+function getTarget() {
+    setTarget(parseFloat(get("targetTemperature", "target_temperature")));
 }
 
 function init() {
-    put("time","time","20:00");
-    put("day","current_day",Days.Monday);
+    put("time", "time", "20:00");
+    put("day", "current_day", Days.Monday);
     timeUpdate();
 
 
 
-
     //slider
-    var mySlider = $("#slid").slider({
+    mySlider = $("#slid").slider({
         reversed: true,
         step: step,
-        id: "slidcolor"
     });
 
-    $("#raiseT").text(mySlider.slider('getValue').toFixed(1));
+    getTarget();
 
     mySlider.on("change", function (x) {
-        $("#raiseT").text(x.value.newValue.toFixed(1));
+        setTarget(x.value.newValue);
+    });
+
+    $("#dayMode").on("click", function () {
+        setTarget(parseFloat(get("dayTemperature", "day_temperature")));
+    });
+
+    $("#nightMode").on("click", function () {
+        setTarget(parseFloat(get("nightTemperature", "night_temperature")));
     });
 
     //runtime
     window.setInterval(timeUpdate, 1000);
     //gettemp
     window.setInterval(currentTemp, 1000);
+
+    window.setInterval(getTarget, 1000);
 
 }
