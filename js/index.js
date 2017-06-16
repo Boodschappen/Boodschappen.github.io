@@ -1,54 +1,50 @@
-var virtualOrigin = Date.parse("2012-01-01T00:00:04"),
-    realOrigin = Date.parse("2012-01-01T00:00:00"),
-    factor = 300;
+var step = 0.1;
 
-function getVirtual(time) {
-    return new Date( virtualOrigin + (time - realOrigin) * factor );
-}
-
-function pad2(num) {
-    return ("0"+num).substr(-2);
-}
-function format(time) {
-     return time.getDate()
-        + "-" + (time.getMonth()+1)
-        + "-" + time.getFullYear()
-        + " " + pad2(time.getHours())
-        + ":" + pad2(time.getMinutes())
-}
-
-function startTime() {
-    var now = new Date();
-    var display = getVirtual(now);
-    output.innerText = format(display);
-    setTimeout(startTime, 1000/factor - (now.getMilliseconds() % (1000/factor)));
-}
-
-var step=0.1;
+window.addEventListener("load", init, false);
 
 function raise() {
-	var current = mySlider.slider('getValue');
-	mySlider.slider('setValue',current + step, false, true)
+    var current = mySlider.slider('getValue');
+    mySlider.slider('setValue', current + step, false, true)
 }
 
 function lower() {
-	var current = mySlider.slider('getValue');
-	mySlider.slider('setValue',current - step, false, true)
+    var current = mySlider.slider('getValue');
+    mySlider.slider('setValue', current - step, false, true)
 }
 
-var output = document.getElementById("clock");
-startTime();
+function timeUpdate() {
+    $("#day").text(get("day", "current_day"));
+    $("#clock").text(get("time", "time"));
+}
+
+function currentTemp(){
+        $("#currentTemp").text(get("currentTemperature","current_temperature")+"°C");
+}
+
+function init() {
+    put("time","time","20:00");
+    put("day","current_day",Days.Monday);
+    timeUpdate();
 
 
-//slider
-var mySlider = $("#slid").slider({
-	reversed: true,
-	step: step,
-	id: "slidcolor"
-});
 
-$("#raiseT").text(mySlider.slider('getValue').toFixed(1));
 
-mySlider.on("change",function(x){
-	$("#raiseT").text(x.value.newValue.toFixed(1));
-});
+    //slider
+    var mySlider = $("#slid").slider({
+        reversed: true,
+        step: step,
+        id: "slidcolor"
+    });
+
+    $("#raiseT").text(mySlider.slider('getValue').toFixed(1));
+
+    mySlider.on("change", function (x) {
+        $("#raiseT").text(x.value.newValue.toFixed(1));
+    });
+
+    //runtime
+    window.setInterval(timeUpdate, 1000);
+    //gettemp
+    window.setInterval(currentTemp, 1000);
+
+}

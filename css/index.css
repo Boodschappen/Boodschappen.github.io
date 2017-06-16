@@ -44,8 +44,8 @@ button{
 	height: 15px !important;
 }
 
-#slidcolor .slider-track-high{
-	background: darkred;
+.slider-track-high{
+	background: darkred !important;
 }
 
 .slider-handle {
@@ -62,12 +62,12 @@ button{
 }
 
 .glyphicon.glyphicon-chevron-down {
-    font-size: 10px; 
-    font-size: 9vmin;
+    font-size: 5px; 
+    font-size: 8vmin;
 }
 
 .glyphicon.glyphicon-chevron-up {
-    font-size: 10px; 
-    font-size: 9vmin;
+    font-size: 5px; 
+    font-size: 8vmin;
 	color: darkred;
 }
