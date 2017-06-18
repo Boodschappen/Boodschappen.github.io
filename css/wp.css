@@ -1,0 +1,80 @@
+h1{
+	color: #ffffff;
+
+.panelgrey{
+	background-color: #3a4a66;
+}
+
+.panelwhite{
+	background-color: #FFFFFF !important;
+}
+
+.txtcenter{
+	text-align:center;
+	display: flex;
+    align-items: center;
+	justify-content:center;
+}
+
+.panel{
+	box-shadow: 0 0 15px #404040 !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	max-width: 100%;
+}
+
+.slider.slider-vertical {
+	height: 100% !important;
+	
+}
+
+.slider.slider-vertical .slider-track {
+	width: 25px !important;
+}
+
+.slider-handle {
+	width: 35px !important;
+	height: 15px !important;
+}
+
+.slider-track-high{
+	background: darkred !important;
+}
+
+.slider-handle {
+	background: black;
+}
+
+p {
+    font-size: 5px; 
+    font-size: 3vmin;
+}
+
+
+.glyphicon.glyphicon-chevron-down {
+    font-size: 5px; 
+    font-size: 8vmin;
+}
+
+.glyphicon.glyphicon-chevron-up {
+    font-size: 5px; 
+    font-size: 8vmin;
+	color: darkred;
+}
