@@ -6,12 +6,13 @@ h3{
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 10px 50%;
+    padding-top: 10px;
+    padding-left:7%;
+	width: 86%;
     display: inline-block;
     font-size: 16px;
 	font-weight: bold;
     margin: 2px 2px;
     cursor: pointer;
-	max-width: 95%;
 }
 
