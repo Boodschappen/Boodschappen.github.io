@@ -19,8 +19,8 @@ function timeUpdate() {
 }
 
 function currentTemp() {
-    var curr = get("currentTemperature", "current_temperature");
-    var targ = get("targetTemperature", "target_temperature")
+    var curr = parseFloat(get("currentTemperature", "current_temperature"));
+    var targ = parseFloat(get("targetTemperature", "target_temperature"));
 
     $("#currentTemp").text(curr + "°C");
 
