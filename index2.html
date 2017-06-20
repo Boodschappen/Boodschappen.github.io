@@ -40,95 +40,92 @@
 </head>
 
 
-<body>
-	<div class="container">
-		<div class="panel panel-default">
-			<div class="panel-heading panelwhite">
-				<h4>Mobile Thermostat<small>
-						<span id="day"></span>
-						<span id="clock"></span>
-					</small>
-				</h4>
+<body style="background-color:#3a4a66;">
+	<div class="panel-heading panelwhite">
+		<h4>Mobile Thermostat
+			<small>
+				<span id="day"></span>
+				<span id="clock"></span>
+			</small>
+		</h4>
+	</div>
+	<div class="panel-body panelgrey">
+		<div class="row" style="margin:0">
+			<div class="col-xs-12">
+				<div class="panel panel-default">
+					<div class="panel-body txtcenter">
+						<div class="col-xs-6">
+							<a href="#">
+								<button type="button" id="dayMode" class="btn btn-default" style="border: 2; background: transparent">
+									<img src="images/sun.jpg" width="70" height="40"/>
+								</button>
+							</a>
+						</div>
+
+						<div class="col-xs-6">
+							<a href="#">
+								<button type="button" id="nightMode" class="btn btn-default" style="border: 2; background: transparent">
+									<img src="images/moon.jpg" width="70" height="40"/>
+								</button>
+							</a>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="panel-body panelgrey">
-				<div class="row" style="margin:0">
-					<div class="col-xs-12">
-						<div class="panel panel-default">
-							<div class="panel-body txtcenter">
-								<div class="col-xs-6">
-									<a href="#">
-										<button type="button" id="dayMode" class="btn btn-default" style="border: 2; background: transparent">
-											<img src="images/sun.jpg" width="70" height="40"/>
-										</button>
-									</a>
-								</div>
-
-								<div class="col-xs-6">
-									<a href="#">
-										<button type="button" id="nightMode" class="btn btn-default" style="border: 2; background: transparent">
-											<img src="images/moon.jpg" width="70" height="40"/>
-										</button>
-									</a>
-								</div>
-							</div>
+		</div>
+		<div class="row" style="margin:0">
+			<div class="col-xs-5">
+				<div class="panel panel-default">
+					<div class="panel-body txtcenter" style="height:25vmin">
+						<div style="display:block">
+							<p>Current Temperature</p>
+							<h1>
+								<p> <span id="currentTemp"></span></p>
+							</h1>
+							<span id="up" style="color:darkred" class="glyphicon glyphicon-arrow-up"></span>
+							<span id="dup" style="color:#337ab7" class="glyphicon glyphicon-arrow-down"></span>
 						</div>
 					</div>
 				</div>
-				<div class="row" style="margin:0">
-					<div class="col-xs-5">
-						<div class="panel panel-default">
-							<div class="panel-body txtcenter" style="height:25vmin">
-								<div style="display:block">
-									<p>Current Temperature</p>
-									<h1>
-										<p> <span id="currentTemp"></span></p>
-									</h1>
-									<span id="up" style="color:darkred" class="glyphicon glyphicon-arrow-up"></span>
-									<span id="dup" style="color:#337ab7" class="glyphicon glyphicon-arrow-down"></span>
-								</div>
-							</div>
+			</div>
+			<div class="col-xs-7">
+				<div class="panel panel-default">
+					<div class="panel-body txtcenter" style="height:25vmin">
+						<div class="col-xs-6">
+							<a href="#" onclick="raise()">
+								<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"/>
+							</a>
+							<p style="font-size:5vmin"><span id="raiseT"></span>°C</p>
+							<a href="#" onclick="lower()">
+								<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"/>
+							</a>
 						</div>
-					</div>
-					<div class="col-xs-7">
-						<div class="panel panel-default">
-							<div class="panel-body txtcenter" style="height:25vmin">
-								<div class="col-xs-6">
-									<a href="#" onclick="raise()">
-										<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"/>
-									</a>
-									<p style="font-size:5vmin"><span id="raiseT"></span>°C</p>
-									<a href="#" onclick="lower()">
-										<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"/>
-									</a>
-								</div>
-								<div class="col-xs-6" style="height:95%">
-									<input id="slid" type="text" data-provide="slider" data-slider-min="5" data-slider-max="30" data-slider-value="18" data-slider-orientation="vertical"
-									    data-slider-handle="round" />
-								</div>
-							</div>
+						<div class="col-xs-6" style="height:95%">
+							<input id="slid" type="text" data-provide="slider" data-slider-min="5" data-slider-max="30" data-slider-value="18" data-slider-orientation="vertical"
+							    data-slider-handle="round" />
 						</div>
 					</div>
 				</div>
-				<div class="row" style="margin:0">
-					<div class="col-xs-12">
-						<div class="panel panel-default">
-							<div class="panel-body txtcenter">
-								<div class="col-xs-6">
-									<a href="wp.html">
-										<button type="button" class="btn btn-default" style="border: 2; background: transparent">
-											<p>Week <br> Program</p>
-										</button>
-											</a>
-								</div>
+			</div>
+		</div>
+		<div class="row" style="margin:0">
+			<div class="col-xs-12">
+				<div class="panel panel-default">
+					<div class="panel-body txtcenter">
+						<div class="col-xs-6">
+							<a href="#">
+								<button type="button" class="btn btn-default" style="border: 2; background: transparent">
+									<p>Week <br> Program</p>
+								</button>
+							</a>
+						</div>
 
-								<div class="col-xs-6">
-									<a href="#">
-										<button type="button" class="btn btn-default" style="border: 2; background: transparent">
-											<p>Custom <br>Temp.</p>
-										</button>
-									</a>
-								</div>
-							</div>
+						<div class="col-xs-6">
+							<a href="#">
+								<button type="button" class="btn btn-default" style="border: 2; background: transparent">
+									<p>Custom <br>Temp.</p>
+								</button>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -137,12 +134,13 @@
 	</div>
 
 
+
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/bootstrap-slider.min.js"></script>
-	<script src="js/api.js"></script>	
+	<script src="js/api.js"></script>
 	<script src="js/index.js"></script>
 </body>
 
