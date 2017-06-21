@@ -76,21 +76,24 @@
 		<div class="row" style="margin:0">
 			<div class="col-xs-5">
 				<div class="panel panel-default">
-					<div class="panel-body txtcenter" style="height:25vmin">
+					<div class="panel-body txtcenter" style="height:35vmin">
 						<div style="display:block">
 							<p>Current Temperature</p>
 							<h1>
-								<p> <span id="currentTemp"></span></p>
+								<p> <span id="currentTemp"></span>
+								<span id="up" style="color:darkred" class="glyphicon glyphicon-arrow-up p2"></span>
+								<span id="dup" style="color:#337ab7" class="glyphicon glyphicon-arrow-down p2"></span>
+								</p>	
 							</h1>
-							<span id="up" style="color:darkred" class="glyphicon glyphicon-arrow-up"></span>
-							<span id="dup" style="color:#337ab7" class="glyphicon glyphicon-arrow-down"></span>
+							<p class="p2">till <span id="tillTemp"></span></p>
+							
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-xs-7">
 				<div class="panel panel-default">
-					<div class="panel-body txtcenter" style="height:25vmin">
+					<div class="panel-body txtcenter" style="height:35vmin">
 						<div class="col-xs-6">
 							<a href="#" onclick="raise()">
 								<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"/>
@@ -139,6 +142,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/underscore-min.js"></script>
 	<script src="js/bootstrap-slider.min.js"></script>
 	<script src="js/api.js"></script>
 	<script src="js/index.js"></script>

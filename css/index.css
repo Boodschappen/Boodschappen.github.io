@@ -54,7 +54,12 @@ button{
 
 p {
     font-size: 5px; 
-    font-size: 4vmin;
+    font-size: 5vmin;
+}
+
+.p2{
+	font-size: 3px; 
+    font-size: 3vmin;
 }
 
 button{
