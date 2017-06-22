@@ -15,6 +15,7 @@
 
 .panel{
 	box-shadow: 0 0 15px #404040 !important;
+	margin: 0px;
 }
 
 img {
@@ -71,6 +72,10 @@ button{
     box-shadow: 0 0 10px #989898;
 }
 
+.button1{
+	height: 15vmin;
+}
+
 .glyphicon.glyphicon-chevron-down {
     font-size: 5px; 
     font-size: 8vmin;
@@ -80,4 +85,16 @@ button{
     font-size: 5px; 
     font-size: 8vmin;
 	color: darkred;
+}
+body
+{
+	width:90%;
+	margin:auto;
+	min-width:100%;
+	max-width:500%;
+}
+
+.main{
+	width: 100%;
+	height: 100%;
 }
