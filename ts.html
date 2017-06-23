@@ -9,7 +9,7 @@
 	<title>Temperature Settings</title>
 
 	<!-- Bootstrap -->
-	<link href="" rel="stylesheet" />
+	<link href="css/ts.css" rel="stylesheet" />
 	<link href="css/bootstrap.min.css" rel="stylesheet" />
 	<link href="css/bootstrap-slider.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
@@ -37,7 +37,24 @@
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 </head>
-
+				
+					<div class="xx">DAY</div>
+					<div class ="day" style="height:40vmin">
+						<div class="col-xs-6">
+							<a href="#" >
+								<span onclick="raise()" class="glyphicon glyphicon-chevron-up" aria-hidden="true"/>
+							</a>
+							<p style="font-size:5vmin"><span id="raiseT"></span>°C</p>
+							<a href="#">
+								<span onclick="lower()" class="glyphicon glyphicon-chevron-down" aria-hidden="true"/>
+							</a>
+						</div>
+						<div class="col-xs-6" style="height:95%">
+							<input id="slid" type="text" data-provide="slider" data-slider-min="5" data-slider-max="30" data-slider-value="18" data-slider-orientation="vertical"
+							    data-slider-handle="round" />
+						</div>
+					</div>
+					
 
 <body>
 	
@@ -46,8 +63,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/underscore-min.js"></script>
 	<script src="js/bootstrap-slider.min.js"></script>
-	<script src="js/general.js"></script>
+	<script src="js/api.js"></script>
 	<script src="js/index.js"></script>
 </body>
 
