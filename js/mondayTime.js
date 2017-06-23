@@ -1,44 +1,30 @@
+window.addEventListener("load", init, false);
+
 var mycount = 0;
 
 $("#add").click(function (ev) {
-    $("#container").append('            <div class="row" style="margin:0"> \
-                <div class="panel panel-default" style="background-color:white;"> \
-                    <div class="panel-body txtcenter">\
-                        <div class="row" style="margin:0">\
-                            <div class="col-xs-12">\
-                                <div id="add" class="input-group bootstrap-timepicker timepicker">\
-                                    <input type="text" class="form-control input-small timepicker1" readonly="true"></input>\
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>\
-                                    <img src="images/sun.png" width="30vmin" height="30vmin" /></p>\
-                                </div>\
-                            </div>\
-                        </div>\
-                    </div>\
-                </div>\
-                <div class="panel panel-default" style="background-color:white;">\
-                    <div class="panel-body txtcenter">\
-                        <div class="row" style="margin:0">\
-                            <div class="col-xs-12">\
-                                <div id="add" class="input-group bootstrap-timepicker timepicker">\
-                                    <input type="text" class="form-control input-small timepicker1" readonly="true"></input>\
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>\
-                                    <img src="images/moon.png" width="30vmin" height="30vmin" /></p>\
-                                </div>\
-                            </div>\
-                        </div>\
-                    </div>\
-                </div>\
-            </div>');
-    $('.timepicker1').timepicker({
-        showMeridian: false,
-        minuteStep: 5,
-        showInputs: false,
-        disableFocus: true
-    });
-    mycount = mycount + 1
+    mycount = mycount + 1;
+
+    for (var i = 1; i <= 5; i++) {
+        if (i > mycount) {
+            $("#row" + i).hide();
+        } else {
+            $("#row" + i).show();
+        }
+    }
+
+
+
     if (mycount >= 5) {
-        this.disabled = true 
+        this.disabled = true
     } else {
-        this.disabled=false
+        this.disabled = false
     }
 });
+
+function init() {
+    mycount = 0;
+    for (var i = 1; i <= 5; i++) {
+        $("#row" + i).hide();
+    }
+}
