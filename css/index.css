@@ -17,6 +17,9 @@
 	box-shadow: 0 0 15px #404040 !important;
 	margin: 0px;
 }
+.panel-body {
+  padding: 10px !important;
+}
 
 img {
     max-width: 100%;
