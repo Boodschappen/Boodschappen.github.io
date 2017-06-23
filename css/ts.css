@@ -1,0 +1,62 @@
+.day{
+	padding-top: 5%;
+	float: left;
+	width: 30%;
+}
+.xx{
+    padding-top: 10%;
+	padding-left: 7%;
+    font-size: 30px;
+    font-weight: bold;
+}
+.slider.slider-vertical {
+	height: 100% !important;
+	
+}
+
+.slider.slider-vertical .slider-track {
+	width: 25px !important;
+}
+
+.slider-handle {
+	width: 35px !important;
+	height: 15px !important;
+}
+
+.slider-track-high{
+	background: darkred !important;
+}
+
+.slider-handle {
+	background: black
+}
+
+p {
+    font-size: 5px; 
+    font-size: 5vmin;
+}
+
+.p2{
+	font-size: 3px; 
+    font-size: 3vmin;
+}
+
+.p3{
+	font-size: 4px; 
+    font-size: 4vmin;
+}
+
+button{
+    box-shadow: 0 0 10px #989898;
+}
+
+.glyphicon.glyphicon-chevron-down {
+    font-size: 5px; 
+    font-size: 8vmin;
+}
+
+.glyphicon.glyphicon-chevron-up {
+    font-size: 5px; 
+    font-size: 8vmin;
+	color: darkred;
+}
