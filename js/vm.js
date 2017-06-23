@@ -102,9 +102,9 @@ function weekProgramOn() {
 }
 
 function init() {
-    put("time", "time", "11:00");
-    put("day", "current_day", Days.Monday);
+
     timeUpdate();
+    weekProgramOff();
 
 
 
@@ -135,20 +135,4 @@ function init() {
 
     window.setInterval(getTarget, 1000);
     
-    setDefault();
-    addPeriod(Days.Monday, "12:00", "14:00");
-    addPeriod(Days.Monday, "17:00", "21:00");
-    addPeriod(Days.Tuesday, "12:00", "14:00");
-    addPeriod(Days.Tuesday, "22:00", "23:00");
-    addPeriod(Days.Wednesday, "12:00", "14:00");
-    addPeriod(Days.Wednesday, "15:30", "19:00");
-    addPeriod(Days.Thursday, "12:00", "14:00");
-    addPeriod(Days.Friday, "16:30", "22:00");
-    addPeriod(Days.Saturday, "12:00", "14:00");
-    addPeriod(Days.Sunday, "17:00", "23:30");
-    getWeekProgram();
-    
-    weekProgramOn();
-
-
 }
