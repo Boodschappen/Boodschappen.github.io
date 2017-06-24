@@ -24,14 +24,41 @@ $("#add").click(function (ev) {
             $("#row" + i).show();
         }
     }
-
-
-
     if (mycount >= 5) {
         this.disabled = true
     } else {
         this.disabled = false
     }
+});
+
+$("#remove1").click(function () {
+    $("#row1").hide();
+    removePeriod(Days.Monday,0);
+    mycount=mycount-1;
+});
+
+$("#remove2").click(function () {
+    $("#row2").hide();
+    removePeriod(Days.Monday,1)
+    mycount=mycount-1;
+});
+
+$("#remove3").click(function () {
+    $("#row3").hide();
+    removePeriod(Days.Monday,2)
+    mycount=mycount-1;
+});
+
+$("#remove4").click(function () {
+    $("#row4").hide();
+    removePeriod(Days.Monday,3)
+    mycount=mycount-1;
+});
+
+$("#remove5").click(function () {
+    $("#row5").hide();
+    removePeriod(Days.Monday,4)
+    mycount=mycount-1;
 });
 
 function fillWeek() {
