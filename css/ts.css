@@ -1,11 +1,28 @@
 .day{
+	background-color: white;
 	padding-top: 5%;
+	padding-left: 30%;
 	float: left;
-	width: 30%;
+	width: 100%;
+}
+
+.night{
+	background-color: white;
+	padding-top: 5%;
+	padding-left: 30%;
+	float: left;
+	width: 100%;
+}
+
+.back{
+	padding-left: 2%;
+	padding-top: 1%;
+	padding-bottom: 3%;
 }
 .xx{
-    padding-top: 10%;
-	padding-left: 7%;
+	width: 100%;
+	background-color: white;
+	padding-left: 47%;
     font-size: 30px;
     font-weight: bold;
 }
