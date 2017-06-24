@@ -12,6 +12,7 @@
 	<!-- Bootstrap -->
 	<link href="css/wp.css" rel="stylesheet" />
 	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/index.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
 	<style>
@@ -40,18 +41,18 @@
 
 
 <body style="background-color:#3a4a66;">
-		<div class="panel panel-default">
-			<div class="panel-heading panelwhite">
-				<h4>Mobile Thermostat
-					<small>
-						<span id="day"></span>
-						<span id="clock"></span>
-					</small>
-				</h4>
-			</div>
-		</div>
-	<div class ="back"><a href = "index.html"><img src="images/back.png" width="35" height="35"/></a></div>
-	<br>
+    <div class="main">
+        <div class="panel-heading panelwhite">
+            <h4 class="p3">Mobile Thermostat
+                <small>
+				<span id="day"></span>
+				<span onclick="timeSet()" id="clock"></span>
+			</small>
+            </h4>
+        </div>
+        <br>
+        <div class="back"><a href="index.html"><img src="images/back.png" width="35" height="35" style="margin-left:5%; margin-top:2%"/></a></div>
+        <br>
 	<div class ="hd" align = "center"> Week Program </div>
 	<div class ="bt">
 	                        <a href ="ts.html"><button class="bu" style = "background-color: #FDA744;">

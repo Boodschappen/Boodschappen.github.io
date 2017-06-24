@@ -71,12 +71,13 @@ p {
     font-size: 4vmin;
 }
 
-button{
-    box-shadow: 0 0 10px #989898;
-}
-
 .button1{
 	height: 15vmin;
+	box-shadow: 0 0 10px #989898;
+}
+
+.button2{
+	box-shadow: 0 0 10px #989898;
 }
 
 .glyphicon.glyphicon-chevron-down {
