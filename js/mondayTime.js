@@ -1,64 +1,76 @@
 window.addEventListener("load", init, false);
 
-var mycount = 0;
-
 $("#saveProgram").click(function () {
     var num = getProgram(Days.Monday).length;
     for (var i = 1; i <= num; i++) {
         removePeriod(Days.Monday, 0);
     }
 
-    for (var i = 1; i <= mycount; i++) {
-        addPeriod(Days.Monday, $("#day" + i).val(), $("#night" + i).val());
-    }
-
-});
-
-$("#add").click(function (ev) {
-    mycount = mycount + 1;
-
     for (var i = 1; i <= 5; i++) {
-        if (i > mycount) {
-            $("#row" + i).hide();
-        } else {
-            $("#row" + i).show();
+        if ($("#row" + i).is(":visible")) {
+            addPeriod(Days.Monday, $("#day" + i).val(), $("#night" + i).val());
         }
     }
-    if (mycount >= 5) {
-        this.disabled = true
-    } else {
-        this.disabled = false
-    }
+
 });
 
+/**-------------------------ADD---------------------------------------------------**/
+$("#add1").click(function () {
+    $("#row1").show();
+    $("#add1").hide();
+
+});
+
+$("#add2").click(function () {
+    $("#row2").show();
+    $("#add2").hide();
+});
+
+$("#add3").click(function () {
+    $("#row3").show();
+    $("#add3").hide();
+});
+
+$("#add4").click(function () {
+    $("#row4").show();
+    $("#add4").hide();
+
+});
+
+$("#add5").click(function () {
+    $("#row5").show();
+    $("#add5").hide();
+});
+/**-------------------------REMOVE---------------------------------------------------**/
 $("#remove1").click(function () {
     $("#row1").hide();
-    removePeriod(Days.Monday,0);
-    mycount=mycount-1;
+    $("#add1").show();
+
 });
 
 $("#remove2").click(function () {
     $("#row2").hide();
-    removePeriod(Days.Monday,1)
-    mycount=mycount-1;
+    $("#add2").show();
+
 });
 
 $("#remove3").click(function () {
     $("#row3").hide();
-    removePeriod(Days.Monday,2)
-    mycount=mycount-1;
+    $("#add3").show();
+
 });
 
 $("#remove4").click(function () {
     $("#row4").hide();
-    removePeriod(Days.Monday,3)
-    mycount=mycount-1;
+    $("#add4").show();
+
 });
 
 $("#remove5").click(function () {
     $("#row5").hide();
-    removePeriod(Days.Monday,4)
-    mycount=mycount-1;
+    $("#add5").show();
+
+
 });
 
 function fillWeek() {
@@ -69,18 +81,19 @@ function fillWeek() {
         $('#day' + (i + 1)).timepicker('setTime', times[i][0]);
         $('#night' + (i + 1)).timepicker('setTime', times[i][1]);
         $('#row' + (i + 1)).show();
-        mycount++;
+        $("#add" + (i + 1)).hide();
+        }
     }
-}
 
 
 
 
 
-function init() {
-    mycount = 0;
-    for (var i = 1; i <= 5; i++) {
-        $("#row" + i).hide();
+    function init() {
+        mycount = 0;
+        for (var i = 1; i <= 5; i++) {
+            $("#row" + i).hide();
+        }
+        fillWeek();
+
     }
-    fillWeek();
-}
