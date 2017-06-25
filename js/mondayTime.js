@@ -69,31 +69,42 @@ $("#remove4").click(function () {
 $("#remove5").click(function () {
     $("#row5").hide();
     $("#add5").show();
-
-
 });
 
 function fillWeek() {
     getWeekProgram();
-    var times = getProgram(Days.Monday)
+    var times = getProgram(Days.Monday);
 
     for (var i = 0; i < times.length; i++) {
         $('#day' + (i + 1)).timepicker('setTime', times[i][0]);
         $('#night' + (i + 1)).timepicker('setTime', times[i][1]);
         $('#row' + (i + 1)).show();
         $("#add" + (i + 1)).hide();
-        }
     }
+}
 
+function init() {
+    mycount = 0;
+    for (var i = 1; i <= 5; i++) {
+        $("#row" + i).hide();
 
-
-
-
-    function init() {
-        mycount = 0;
-        for (var i = 1; i <= 5; i++) {
-            $("#row" + i).hide();
-        }
-        fillWeek();
-
+        $("#day" + i).timepicker().on('hide.timepicker', onDayHide.bind(this, i));
+        $("#night" + i).timepicker().on('hide.timepicker', onNightHide.bind(this, i));
     }
+    fillWeek();
+
+}
+
+function onDayHide(i, e) {
+    var night = $("#night" + i).val();
+    if (parseTime(e.time.value) > parseTime(night)) {
+        $('#night' + i).timepicker('setTime', e.time.value);
+    }
+}
+
+function onNightHide(i, e) {
+    var day = $("#day" + i).val();
+    if (parseTime(e.time.value) < parseTime(day)) {
+        $('#day' + i).timepicker('setTime', e.time.value);
+    }
+}

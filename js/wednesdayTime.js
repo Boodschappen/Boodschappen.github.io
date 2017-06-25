@@ -82,18 +82,35 @@ function fillWeek() {
         $('#night' + (i + 1)).timepicker('setTime', times[i][1]);
         $('#row' + (i + 1)).show();
         $("#add" + (i + 1)).hide();
-        }
     }
+}
 
 
 
 
 
-    function init() {
-        mycount = 0;
-        for (var i = 1; i <= 5; i++) {
-            $("#row" + i).hide();
-        }
-        fillWeek();
+function init() {
+    mycount = 0;
+    for (var i = 1; i <= 5; i++) {
+        $("#row" + i).hide();
 
+        $("#day" + i).timepicker().on('hide.timepicker', onDayHide.bind(this, i));
+        $("#night" + i).timepicker().on('hide.timepicker', onNightHide.bind(this, i));
     }
+    fillWeek();
+
+}
+
+function onDayHide(i, e) {
+    var night = $("#night" + i).val();
+    if (parseTime(e.time.value) > parseTime(night)) {
+        $('#night' + i).timepicker('setTime', e.time.value);
+    }
+}
+
+function onNightHide(i, e) {
+    var day = $("#day" + i).val();
+    if (parseTime(e.time.value) < parseTime(day)) {
+        $('#day' + i).timepicker('setTime', e.time.value);
+    }
+}
