@@ -4,6 +4,7 @@ function init() {
 
     timeUpdate();
     weekProgramOff();
+    //currentTemp();
 
 
 
@@ -33,5 +34,7 @@ function init() {
     window.setInterval(currentTemp, 3000);
 
     window.setInterval(getTarget, 10000);
+
+    currentTemp();
     
 }
