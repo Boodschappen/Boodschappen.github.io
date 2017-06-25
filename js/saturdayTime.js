@@ -11,7 +11,7 @@ $("#saveProgram").click(function () {
             addPeriod(Days.Saturday, $("#day" + i).val(), $("#night" + i).val());
         }
     }
-
+    setWeekProgram();
 });
 
 /**-------------------------ADD---------------------------------------------------**/

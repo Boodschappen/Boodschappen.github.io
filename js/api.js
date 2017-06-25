@@ -235,7 +235,7 @@ function addPeriod(day, start, end) {
     var program = getWeekProgram()[day];
     program.push([start, end]);
     sortMergeProgram(day);
-    setWeekProgram();
+    //setWeekProgram();
 }
 
 /* Removes a heating period from a specific day.
@@ -246,7 +246,7 @@ function removePeriod(day, idx) {
     var start = program[idx][0];
     var end = program[idx][1];
     program.splice(idx,1);
-    setWeekProgram();
+    //setWeekProgram();
 }
 
 /* Checks whether the temperature is within the range [5.0,30.0]
