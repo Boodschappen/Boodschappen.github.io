@@ -4,6 +4,7 @@ window.addEventListener("load", init, false);
 function timeSet(){
     put("time", "time", "11:00");
     put("day", "current_day", Days.Monday);
+    setDefault();
 }
 
 function init() {
