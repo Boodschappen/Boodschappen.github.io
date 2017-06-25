@@ -5,6 +5,7 @@ function timeSet(){
     put("time", "time", "11:00");
     put("day", "current_day", Days.Monday);
     setDefault();
+    weekProgramOn();
 }
 
 function init() {
