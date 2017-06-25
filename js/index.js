@@ -20,7 +20,7 @@ function init() {
     getTarget();
 
     mySlider.on("slideStop", function (x) {
-        setTarget(x.value.newValue);
+        setTarget(x.value);
     });
 
     $("#dayMode").on("click", function () {
