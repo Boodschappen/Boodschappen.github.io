@@ -1,14 +1,14 @@
 window.addEventListener("load", init, false);
 
 $("#saveProgram").click(function () {
-    var num = getProgram(Days.Tuesday).length;
+    var num = getProgram(Days.Sunday).length;
     for (var i = 1; i <= num; i++) {
-        removePeriod(Days.Tuesday, 0);
+        removePeriod(Days.Sunday, 0);
     }
 
     for (var i = 1; i <= 5; i++) {
         if ($("#row" + i).is(":visible")) {
-            addPeriod(Days.Tuesday, $("#day" + i).val(), $("#night" + i).val());
+            addPeriod(Days.Sunday, $("#day" + i).val(), $("#night" + i).val());
         }
     }
     setWeekProgram();
@@ -75,7 +75,7 @@ $("#remove5").click(function () {
 
 function fillWeek() {
     getWeekProgram();
-    var times = getProgram(Days.Tuesday)
+    var times = getProgram(Days.Sunday)
 
     for (var i = 0; i < times.length; i++) {
         $('#day' + (i + 1)).timepicker('setTime', times[i][0]);

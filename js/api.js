@@ -232,7 +232,7 @@ function parseTime(t) {
 /* Adds a heating period for a specific day
 */
 function addPeriod(day, start, end) {
-    var program = getWeekProgram()[day];
+    var program = getProgram(day); //getWeekProgram()[day];
     program.push([start, end]);
     sortMergeProgram(day);
     //setWeekProgram();
@@ -242,7 +242,7 @@ function addPeriod(day, start, end) {
    idx is the idex of the period with values from 0 to 4
 */
 function removePeriod(day, idx) {
-    var program = getWeekProgram()[day];
+    var program = getProgram(day); //getWeekProgram()[day];
     var start = program[idx][0];
     var end = program[idx][1];
     program.splice(idx,1);
