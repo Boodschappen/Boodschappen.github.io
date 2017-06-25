@@ -40,10 +40,11 @@ function init() {
 
     window.setInterval(getTarget, 10000);
     
-    currentTemp();
+    
 
     getWeekProgram();
     
     weekProgramOn();
+    currentTemp();
 
 }
