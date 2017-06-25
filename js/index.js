@@ -39,16 +39,16 @@ function init() {
     window.setInterval(getTarget, 1000);
     
     setDefault();
-    addPeriod(Days.Monday, "12:00", "14:00");
-    addPeriod(Days.Monday, "17:00", "21:00");
-    addPeriod(Days.Tuesday, "12:00", "14:00");
-    addPeriod(Days.Tuesday, "22:00", "23:00");
-    addPeriod(Days.Wednesday, "12:00", "14:00");
-    addPeriod(Days.Wednesday, "15:30", "19:00");
-    addPeriod(Days.Thursday, "12:00", "14:00");
-    addPeriod(Days.Friday, "16:30", "22:00");
-    addPeriod(Days.Saturday, "12:00", "14:00");
-    addPeriod(Days.Sunday, "17:00", "23:30");
+    addPeriod(Days.Monday, "09:00", "12:00");
+    addPeriod(Days.Monday, "17:00", "22:00");
+    addPeriod(Days.Tuesday, "09:00", "12:00");
+    addPeriod(Days.Tuesday, "17:00", "22:00");
+    addPeriod(Days.Wednesday, "09:00", "12:00");
+    addPeriod(Days.Wednesday, "17:00", "22:00");
+    addPeriod(Days.Thursday, "09:00", "12:00");
+    addPeriod(Days.Friday, "17:00", "22:00");
+    addPeriod(Days.Saturday, "09:00", "12:00");
+    addPeriod(Days.Sunday, "17:00", "22:00");
     getWeekProgram();
     
     weekProgramOn();

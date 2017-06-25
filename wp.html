@@ -10,8 +10,10 @@
 	<title>Week Program</title>
 
 	<!-- Bootstrap -->
+	<link href="css/index.css" rel="stylesheet" />
 	<link href="css/wp.css" rel="stylesheet" />
 	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/bootstrap-slider.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
 	<style>
@@ -40,19 +42,17 @@
 
 
 <body style="background-color:#3a4a66;">
-		<div class="panel panel-default">
-			<div class="panel-heading panelwhite">
-				<h4>Mobile Thermostat
-					<small>
-						<span id="day"></span>
-						<span id="clock"></span>
-					</small>
-				</h4>
-			</div>
-		</div>
-	<div class ="back"><a href = "index.html"><img src="images/back.png" width="35" height="35"/></a></div>
+		<div class="panel-heading panelwhite" style="margin-bottom:3vw">
+		<h4 class="p3">Mobile Thermostat
+			<small>
+				<span id="day"></span>
+				<span onclick="timeSet()" id="clock"></span>
+			</small>
+		</h4>
+	</div>
 	<br>
-	<div class ="hd" align = "center"> Week Program </div>
+    <div class="back"><a href="index.html"><img src="images/back.png" width="35" height="35" style="margin-left:5%; margin-top:2%; margin-bottom:2%"/></a></div>
+	<div class ="hd" align = "center"><h4 style="color:white">Week Program</h4></div>
 	<div class ="bt">
 	                        <a href ="ts.html"><button class="bu" style = "background-color: #FDA744;">
 							Set Temperatures
@@ -62,27 +62,27 @@
 							Monday
 						</button></a>
 						<br>
-						<a href ="#"><button class="bu">
+						<a href ="tuesdayTime.html"><button class="bu">
 							Tuesday
 						</button></a>
 						<br>										
-						<a href ="#"><button class="bu">
+						<a href ="wednesdayTime.html"><button class="bu">
 							Wednesday
 						</button></a>
 						<br>
-						<a href ="#"><button class="bu">
-							Thrusday
+						<a href ="thursdayTime.html"><button class="bu">
+							Thursday
 						</button></a>
 						<br>
-						<a href ="#"><button class="bu">
+						<a href ="fridayTime.html"><button class="bu">
 							Friday										
 							</button></a>
 						<br>
-						<a href ="#"><button class="bu">
+						<a href ="saturdayTime.html"><button class="bu">
 							Saturday
 						</button></a>
 						<br>
-						<a href ="#"><button class="bu">
+						<a href ="sundayTime.html"><button class="bu">
 							Sunday
 						</button></a>
 	</div>
