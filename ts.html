@@ -19,6 +19,7 @@
 		.w3-sidebar a {
 			font-family: "Roboto", sans-serif
 		}
+
 		body,
 		h1,
 		h2,
@@ -38,63 +39,70 @@
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 </head>
-				
-					
+
+
 
 <body style="background-color:#3a4a66;">
 	<div class="main">
-	<div class="panel-heading panelwhite" style="margin-bottom:3vw">
-		<h4 class="p3">Mobile Thermostat
-			<small>
+		<div class="panel-heading panelwhite">
+			<h4 class="p3">Mobile Thermostat
+				<small>
 				<span id="day"></span>
 				<span onclick="timeSet()" id="clock"></span>
 			</small>
-		</h4>
-	</div>
-<div class ="back"><a href = "wp.html"><img src="images/back.png" width="35" height="35"/></a></div>
+			</h4>
+		</div>
+		<br>
 
-
-					<div class="xx">DAY</div>
-					<div class ="day" style="height:40vmin">
-						<div class="col-xs-6">
-							<a href="#" >
+		<div><a href="wp.html"><img src="images/back.png" width="35" height="35" style="margin-left:5%; margin-top:2%; margin-bottom:2%"/></a></div>
+		<div align="center">
+			<h4 style="color:white"> Set Temperatures</h4>
+		</div>
+		<div id="container" style="padding-left:4vmin; padding-right:4vmin">
+			<div class="xx">Day</div>
+			<div class="day" style="height:40vmin">
+				<div class="col-xs-6">
+					<a href="#">
 								<span onclick="raiseD()" class="glyphicon glyphicon-chevron-up" aria-hidden="true"/>
 							</a>
-							<p style="font-size:5vmin"><span id="dayT"></span>°C</p>
-							<a href="#">
+					<p style="font-size:5vmin"><span id="dayT"></span>°C</p>
+					<a href="#">
 								<span onclick="lowerD()" class="glyphicon glyphicon-chevron-down" aria-hidden="true"/>
 							</a>
-						</div>
-						<div class="col-xs-6" style="height:95%">
-							<input id="slidDay" type="text" data-provide="slider" data-slider-min="5" data-slider-max="30" data-slider-orientation="vertical" data-slider-handle="square"/>
-						</div>
-					</div>
-					<span style ="color: #3a4a66;">asdsad</span>
-					<div class="xx">NIGHT</div>
-					<div class ="night" style="height:40vmin">
-						<div class="col-xs-6">
-							<a href="#" >
+				</div>
+				<div class="col-xs-6" style="height:95%">
+					<input id="slidDay" type="text" data-provide="slider" data-slider-min="5" data-slider-max="30" data-slider-orientation="vertical"
+					    data-slider-handle="square" />
+				</div>
+			</div>
+			<span style="color: #3a4a66;">asdsad</span>
+			<div class="xx">Night</div>
+			<div class="night" style="height:40vmin">
+				<div class="col-xs-6">
+					<a href="#">
 								<span onclick="raiseN()" class="glyphicon glyphicon-chevron-up" aria-hidden="true"/>
 							</a>
-							<p style="font-size:5vmin"><span id="nightT"></span>°C</p>
-							<a href="#">
+					<p style="font-size:5vmin"><span id="nightT"></span>°C</p>
+					<a href="#">
 								<span onclick="lowerN()" class="glyphicon glyphicon-chevron-down" aria-hidden="true"/>
 							</a>
-						</div>
-						<div class="col-xs-6" style="height:95%">
-							<input id="slidNight" type="text" data-provide="slider" data-slider-min="5" data-slider-max="30" data-slider-orientation="vertical" data-slider-handle="square"/>
-						</div>
-					</div>
+				</div>
+				<div class="col-xs-6" style="height:95%">
+					<input id="slidNight" type="text" data-provide="slider" data-slider-min="5" data-slider-max="30" data-slider-orientation="vertical"
+					    data-slider-handle="square" />
+				</div>
+			</div>
+		</div>
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/underscore-min.js"></script>
-	<script src="js/bootstrap-slider.min.js"></script>
-	<script src="js/api.js"></script>
-	<script src="js/general.js"></script>
-	<script src="js/ts.js"></script>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/underscore-min.js"></script>
+		<script src="js/bootstrap-slider.min.js"></script>
+		<script src="js/api.js"></script>
+		<script src="js/general.js"></script>
+		<script src="js/ts.js"></script>
 </body>
 
 </html>
