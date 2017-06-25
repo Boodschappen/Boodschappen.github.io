@@ -1,63 +1,77 @@
-var mySlider2;
+var mySliderDay;
+var mySliderNight;
 var current;
 
+window.addEventListener("load", init, false);
+
 function raiseD() {
-    var current = mySlider2.slider('getValue');
+    var current = mySliderDay.slider('getValue');
     setDay(current + step);
 }
 
 function lowerD() {
-    var current = mySlider2.slider('getValue');
+    var current = mySliderDay.slider('getValue');
     setDay(current - step);
 }
 
 function raiseN() {
-    var current = mySlider2.slider('getValue');
+    var current = mySliderNight.slider('getValue');
     setNight(current + step);
 }
 
 function lowerN() {
-    var current = mySlider2.slider('getValue');
+    var current = mySliderNight.slider('getValue');
     setNight(current - step);
 }
 
 function setDay(temp) {
-    mySlider2.slider('setValue', temp);
+    mySliderDay.slider('setValue', temp);
     put("dayTemperature", "day_temperature", temp);
     $("#dayT").text(temp.toFixed(1));
 }
 
 function setNight(temp) {
-    mySlider2.slider('setValue', temp);
+    mySliderNight.slider('setValue', temp);
     put("nightTemperature", "night_temperature", temp);
     $("#nightT").text(temp.toFixed(1));
 }
 
 function getDay() {
-    setDay(parseFloat(get("dayTemperature", "day_temperature", temp)));
+    setDay(parseFloat(get("dayTemperature", "day_temperature")));
 }
 
 function getNight() {
-    setNight(parseFloat(get("nightTemperature", "night_temperature", temp)));
+    setNight(parseFloat(get("nightTemperature", "night_temperature")));
 }
 
 function init() {
+    //slider
+    mySliderDay = $("#slidDay").slider({
+        reversed: true,
+        step: step,
+    });
+
+    mySliderNight = $("#slidNight").slider({
+        reversed: true,
+        step: step,
+    });
+
+
+
+    mySliderDay.on("change", function (x) {
+        setDay(x.value.newValue);
+    });
+
+    mySliderNight.on("change", function (x) {
+        setNight(x.value.newValue);
+    });
+
 
     timeUpdate();
     getDay();
     getNight();
 
 
-    //slider
-    mySlider2 = $("#slid").slider({
-        reversed: false,
-        step: step,
-    });
-
-
-
-    mySlider2.on("change", function (x) {
-        setTarget(x.value.newValue);
-    });
+    
 
 }
