@@ -58,11 +58,11 @@ function init() {
 
 
 
-    mySliderDay.on("change", function (x) {
+    mySliderDay.on("slideStop", function (x) {
         setDay(x.value.newValue);
     });
 
-    mySliderNight.on("change", function (x) {
+    mySliderNight.on("slideStop", function (x) {
         setNight(x.value.newValue);
     });
 

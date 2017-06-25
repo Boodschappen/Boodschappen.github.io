@@ -19,7 +19,7 @@ function init() {
 
     getTarget();
 
-    mySlider.on("change", function (x) {
+    mySlider.on("slideStop", function (x) {
         setTarget(x.value.newValue);
     });
 
@@ -32,11 +32,11 @@ function init() {
     });
 
     //runtime
-    window.setInterval(timeUpdate, 1000);
+    window.setInterval(timeUpdate, 10000);
     //gettemp
-    window.setInterval(currentTemp, 1000);
+    window.setInterval(currentTemp, 10000);
 
-    window.setInterval(getTarget, 1000);
+    window.setInterval(getTarget, 10000);
     
     setDefault();
     addPeriod(Days.Monday, "09:00", "12:00");
