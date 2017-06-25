@@ -30,7 +30,7 @@ function init() {
     //runtime
     window.setInterval(timeUpdate, 10000);
     //gettemp
-    window.setInterval(currentTemp, 10000);
+    window.setInterval(currentTemp, 3000);
 
     window.setInterval(getTarget, 10000);
     
